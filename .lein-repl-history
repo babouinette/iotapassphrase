@@ -1,0 +1,195 @@
+(rand-int 5)
+(+ (rand-int 5) 1)
+(+ (rand-int 6) 1)
+(defn generate [number]
+(loop [number]
+  (let [x (+ (rand-int 6) 1)]
+(println " hello" )                )))
+(defn generate2
+    [x number]
+      (println  "Looping with" x)
+        (if  (= x number)
+          (println "done looping")
+              (do (println  "looping! with " x)
+                  (println (+ (rand-int 6) 1))
+                  (recur  (inc x)))))
+(generate2)
+(generate2 0 5)
+(:require '(eff/views))
+(defn generate2
+    [number]
+    (loop [x 0
+           hash []]
+      (println  "Looping with" x)
+        (if  (< x number)
+                  (recur (println  "looping! with " x)
+                  (conj hash (+ (rand-int 6) 1)))
+                  hash)))
+(generate2 5)
+(defn generate2
+    [number]
+    (loop [x 0
+           hash []]
+      (println  "Looping with" x)
+        (if  (< x number)
+                  (recur (println  "looping! with " x)
+                  (conj hash (+ (rand-int 6) 1))
+                 (inc x)
+                  )
+                  hash)))
+(defn generate2
+    [number]
+    (loop [x 0
+           hash []]
+      (println  "Looping with" x)
+        (if  (< x number)
+                  (recur (println  "looping! with " x)
+                  (conj hash (+ (rand-int 6) 1))
+                 (inc x)
+                  )
+                  hash)))
+(generate2 0)
+(generate2 1)
+(defn generate2
+    [number]
+    (loop [x 0
+           hash []]
+      (println  "Looping with" x)
+        (if  (< x number)
+                  (recur (println  "looping! with " x)
+(println (+ (rand-int 6) 1)
+         )
+(inc x))
+                  hash)))
+(defn generate2
+  [number]
+  (loop [x 0
+         hash []]
+    (println  "Looping with" x)
+    (if  (< x number)
+      (recur (println  "looping! with " x)
+             (println (+ (rand-int 6) 1) )
+             (inc x))
+      hash)))
+(defn generate2
+  [number]
+  (loop [x 0
+         hash []]
+    (println  "Looping with" x)
+    (if  (< x number)
+      (do
+        (println  "looping! with " x)
+        (println (+ (rand-int 6) 1) )
+        recur (inc x))
+      hash)))
+(defn generate2
+  [number]
+  (loop [x 0
+         hash []]
+    (println  "Looping with" x)
+    (if  (< x number)
+      (do
+        (println  "looping! with " x)
+        (println (+ (rand-int 6) 1) )
+        (recur (inc x)))
+      hash)))
+(defn generate2
+  [number]
+  (loop [x 0
+         hash []]
+    (println  "Looping with" x)
+    (if  (< x number)
+      (do
+        (println  "looping! with " x)
+        (println (+ (rand-int 6) 1) )
+        (recur (inc x) hash))
+      hash)))
+(generate2 5)
+(defn generate2
+  [number]
+  (loop [x 0
+         hash []]
+    (println  "Looping with" x)
+    (if  (< x number)
+      (do
+        (println  "looping! with " x)
+        (println (+ (rand-int 6) 1) )
+        (recur (inc x) (conj hash (+ (rand-int 6) 1) )))
+      hash)))
+(generate2 6)
+(generate2 5)
+(defn generate2
+  [number]
+  (loop [x 0
+         hash []]
+    (println  "Looping with" x)
+    (if  (< x number)
+      (do
+        (println  "looping! with " x)
+        (println (+ (rand-int 6) 1) )
+        (recur (inc x) (conj hash (+ (rand-int 6) 1) )))
+      (clojure.string/join "" hash))))
+(generate2 5)
+(defn generate2
+  [number]
+  (loop [x 0
+         hash []]
+    (println  "Looping with" x)
+    (if  (< x number)
+      (do
+        (println  "looping! with " x)
+        (println (+ (rand-int 6) 1) )
+        (recur (inc x) (conj hash (+ (rand-int 6) 1) )))
+      (println ( keyword ( clojure.string/join "" hash))))))
+(generate2 5)
+(defn generate2
+  [number]
+  (loop [x 0
+         hash []]
+    (println  "Looping with" x)
+    (if  (< x number)
+      (do
+        (println  "looping! with " x)
+        (println (+ (rand-int 6) 1) )
+        (recur (inc x) (conj hash (+ (rand-int 6) 1) )))
+      ( keyword ( clojure.string/join "" hash)))))
+(generate2 5)
+(repeatidly 5 (generate2 5))
+(generate2 5)
+(repeatidly 5 (generate2 5))
+(repeat 5 (generate2 5))
+(repeat 1 (generate2 5))
+(repeatidly (generate2 5))
+(repeatedly 5 #(rand-int 11))
+(repeatedly 5 #(+ (rand-int 6) 1)))
+(repeatedly 5 #(+ (rand-int 6) 1))
+(defn generate2
+  "Better implementation"
+ []
+ (->> (repeatedly 5 #(+  (rand-int 6) 1))
+      (clojure.string/join "")
+      (keyword)
+  ))
+(generate2)
+(defn generate2
+  "Better implementation"
+ []
+ (as-> (repeatedly 5 #(+  (rand-int 6) 1)) n
+      (clojure.string/join "" n)
+      (keyword n)
+      (n wordlist/wordlist)
+  ))
+clear
+(defn generate-word
+  "Better implementation"
+  []
+  (as-> (repeatedly 5 #(+  (rand-int 6) 1)) n
+    (clojure.string/join "" n)
+    (keyword n)
+    (n wordlist/wordlist)
+    ))
+(:require [eff.wordlist :as wordlist])
+(require 'eff.wordlist)
+(require '[eff.wordlist :as wordlist])
+(require '[wordlist :as wordlist])
+(load eff.wordlist)
